@@ -1,5 +1,7 @@
 # 专业书籍 LLM Wiki 转换流水线
 
+Markdown2WikiStandard：一套把专业书籍 Markdown 转换为证据型 Obsidian LLM Wiki 的标准化流水线。
+
 目标：把专业书籍转换成 Obsidian 可浏览的 LLM Wiki，并保证所有知识页以原书为证据，不把 AI 总结当作原书事实。
 
 ## README 与 STANDARD 的分工
