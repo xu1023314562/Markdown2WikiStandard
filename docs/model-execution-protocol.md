@@ -69,7 +69,7 @@ chunks/learning-orders/*.json
 参考文件：
 
 ```text
-workspace/DBA实战手记/wiki/articles/06-第 6 章 认识HTAP技术/01-第 6 章 到 6.2.3 其他类型数据库的实现方式.md
+workspace/DBA/wiki/articles/06-第 6 章 认识HTAP技术/01-第 6 章 到 6.2.3 其他类型数据库的实现方式.md
 ```
 
 该样例的特点：
