@@ -41,19 +41,19 @@ workspace/<book>/
 ## 快速验证
 
 ```powershell
-python .\scripts\bookwiki.py build --source "G:\05-Study\07.BooksLearning\数据库\DBA实战手记.md" --out "G:\05-Study\13.LLMwiki" --book "DBA实战手记"
+python .\scripts\bookwiki.py build --source "G:\05-Study\07.BooksLearning\数据库\DBA.md" --out "G:\05-Study\13.LLMwiki" --book "DBA"
 ```
 
 默认每个证据块控制在约 1800 tokens 内，可用 `--max-tokens` 调整：
 
 ```powershell
-python .\scripts\bookwiki.py build --source "G:\05-Study\07.BooksLearning\数据库\DBA实战手记.md" --out "G:\05-Study\13.LLMwiki" --book "DBA实战手记" --max-tokens 1400
+python .\scripts\bookwiki.py build --source "G:\05-Study\07.BooksLearning\数据库\DBA.md" --out "G:\05-Study\13.LLMwiki" --book "DBA" --max-tokens 1400
 ```
 
 构建完成后，用 Obsidian 打开：
 
 ```text
-G:\05-Study\13.LLMwiki\workspace\DBA实战手记\wiki
+G:\05-Study\13.LLMwiki\workspace\DBA\wiki
 ```
 
 ## 流水线阶段
