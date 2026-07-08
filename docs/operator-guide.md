@@ -4,7 +4,7 @@
 
 ```powershell
 cd G:\05-Study\13.LLMwiki
-python .\scripts\bookwiki.py build --source "G:\05-Study\07.BooksLearning\数据库\DBA实战手记.md" --out "G:\05-Study\13.LLMwiki" --book "DBA实战手记" --max-tokens 1600
+python .\scripts\bookwiki.py build --source "G:\05-Study\07.BooksLearning\数据库\DBA.md" --out "G:\05-Study\13.LLMwiki" --book "DBA" --max-tokens 1600
 ```
 
 生成：
@@ -19,7 +19,7 @@ workspace/<book>/chunks/learning-orders/
 ## 2. 生成第一版 AI 导学
 
 ```powershell
-python .\scripts\bookwiki.py compile-learning-guides --book-root "G:\05-Study\13.LLMwiki\workspace\DBA实战手记" --skip-existing
+python .\scripts\bookwiki.py compile-learning-guides --book-root "G:\05-Study\13.LLMwiki\workspace\DBA" --skip-existing
 ```
 
 用途：全书先获得统一结构，不追求最终表达质量。
@@ -44,7 +44,7 @@ docs/model-execution-protocol.md
 ## 4. 审计导学质量
 
 ```powershell
-python .\scripts\bookwiki.py audit-learning-guides --book-root "G:\05-Study\13.LLMwiki\workspace\DBA实战手记"
+python .\scripts\bookwiki.py audit-learning-guides --book-root "G:\05-Study\13.LLMwiki\workspace\DBA"
 ```
 
 输出：
