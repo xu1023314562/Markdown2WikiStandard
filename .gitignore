@@ -1,0 +1,17 @@
+# Generated book workspaces may contain copyrighted source material.
+workspace/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Local/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak

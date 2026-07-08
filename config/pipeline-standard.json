@@ -1,0 +1,60 @@
+{
+  "standard_version": "bookwiki-standard-v1",
+  "principle": "以原书为证据的知识编译系统；模型不得直接改写原文。",
+  "token_policy": {
+    "forbid_full_book_prompting": true,
+    "default_max_chunk_tokens": 1600,
+    "default_output_max_tokens": 900,
+    "default_batch_total_tokens": 18000,
+    "model_output_format": "json_array_or_jsonl",
+    "forbid_markdown_table_as_extraction": true
+  },
+  "required_artifacts": [
+    "sources/source.md",
+    "state/source.json",
+    "state/sections.json",
+    "chunks/chunks.jsonl",
+    "chunks/work-orders",
+    "chunks/batches.md",
+    "chunks/batches.json",
+    "wiki/00-Home.md",
+    "wiki/source-map.md",
+    "wiki/token-budget.md",
+    "review/audit-report.md",
+    "pipeline-manifest.json",
+    "compliance-report.md"
+  ],
+  "quality_gates": [
+    {
+      "id": "QG-001",
+      "rule": "Every extracted item must have source_chunk.",
+      "severity": "error"
+    },
+    {
+      "id": "QG-002",
+      "rule": "Every extracted item must have confidence.",
+      "severity": "error"
+    },
+    {
+      "id": "QG-003",
+      "rule": "AI notes must be marked ai_note=true and separated from original-book claims.",
+      "severity": "error"
+    },
+    {
+      "id": "QG-004",
+      "rule": "Markdown tables are not valid extraction output.",
+      "severity": "error"
+    },
+    {
+      "id": "QG-005",
+      "rule": "No generated concept page can be published while audit has ERROR.",
+      "severity": "error"
+    }
+  ],
+  "model_roles": {
+    "extractor": "Read one work-order and output JSON only.",
+    "compiler": "Compile concept pages from reviewed evidence only.",
+    "auditor": "Judge claims against cited chunks only.",
+    "publisher": "Move reviewed pages into wiki; no rewriting."
+  }
+}
