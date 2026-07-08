@@ -79,7 +79,7 @@ extracted/knowledge.batch-001.jsonl
 抽取完成后必须运行：
 
 ```powershell
-python .\scripts\bookwiki.py validate-extraction --book-root "G:\05-Study\13.LLMwiki\workspace\DBA实战手记" --input "G:\05-Study\13.LLMwiki\workspace\DBA实战手记\extracted\knowledge.batch-001.jsonl"
+python .\scripts\bookwiki.py validate-extraction --book-root "G:\05-Study\13.LLMwiki\workspace\DBA" --input "G:\05-Study\13.LLMwiki\workspace\DBA\extracted\knowledge.batch-001.jsonl"
 ```
 
 只有校验 `PASS` 的 JSONL 才能进入下一步。
@@ -129,7 +129,7 @@ python .\scripts\bookwiki.py validate-extraction --book-root "G:\05-Study\13.LLM
 标准命令：
 
 ```powershell
-python .\scripts\bookwiki.py compile-concepts --book-root "G:\05-Study\13.LLMwiki\workspace\DBA实战手记" --min-confidence 0.75
+python .\scripts\bookwiki.py compile-concepts --book-root "G:\05-Study\13.LLMwiki\workspace\DBA" --min-confidence 0.75
 ```
 
 注意：概念页只生成到 `review/candidates/`，不得直接进入 `wiki/concepts/`。
